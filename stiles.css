@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --cor-primaria: #d0bbae;
+    --cor-secundaria: #363238;
+    --cor-terciaria: #634739;
+    --cor-hover: #9d7058;
+
+    --fonte-principal: "Oswald", serif;
+    --font-secundria: "Lato", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #d0bbae 70%, #363238 30%);
+}
+
+header {
+    padding: 2% 0% 0% 5%;
+}
+
+nav {
+    display: flex;
+    gap: 80px;
+}
+
+.menu {
+    font-family: var(--font-secundria);
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+.menu:hover {
+    color: var(--cor-hover);
+}
+
+h2 {
+    font-family: var(--font-secundria);
+    font-size: clamp(1.5rem, 1.875vw, 2.25rem);
+    color: var(--cor-hover);
+}
+
+h1 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    font-size: clamp(3rem, 5.2vw, 6.25rem);
+    line-height: 0.9;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+main{
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6%;
+    
+}
+
+.imagem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.jessica {
+    position: fixed; 
+    top: 15%; 
+    right: 5%; 
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 0; 
+}
+
+#sobre-mim .imagem {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    font-size: 30px; /* Define o tamanho do ícone */
+    color: var(--cor-secundaria);
+}
+
+.btn:hover {
+    color: var(--cor-hover);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+#sobre-mim {
+    margin-top: 100px;
+    padding: 2% 5%;
+}
+
+.titulo {
+    font-size: 20px;
+    text-align: start;
+}
+
+p {
+    font-family: var(--font-secundria);
+    color: var(--cor-secundaria);
+    margin-top: 3%;
+}
+
+.text__sobremim {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: flex-start;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1% 0;
+}
+
+footer p {
+    margin: 10;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: var(--cor-hover); /* Efeito de cor ao passar o mouse */
+}
+
+@media (max-width: 1000px) {
+
+    body {
+        background-color: var(--cor-primaria); /* cor sólida */
+        background: var(--cor-primaria); /* Para garantir que o gradiente seja substituído */;
+    }
+
+    header {
+        padding: 5%;
+        background-color: var(--cor-secundaria);
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px; 
+    }
+
+    .menu {
+        color: var(--cor-hover);
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    main {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    section {
+        width: 100%; 
+    }
+
+    .jessica {
+        position: static; 
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #sobre-mim {
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+    .jessica {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu {
+        font-size: 1rem;
+    }
+}
